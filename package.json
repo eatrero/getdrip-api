@@ -1,0 +1,33 @@
+{
+  "name": "getdrip-api",
+  "version": "0.0.1",
+  "description": "Node JS wrapper for Drip v2 API",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eatrero/getdrip-api.git"
+  },
+  "keywords": [
+    "getdrip",
+    "drip",
+    "email",
+    "getdrip.com",
+    "drip",
+    "api"
+  ],
+  "author": "Ed Atrero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eatrero/getdrip-api/issues"
+  },
+  "homepage": "https://github.com/eatrero/getdrip-api",
+  "devDependencies": {
+    "expect.js": "^0.3.1"
+  },
+  "dependencies": {
+    "request": "^2.61.0"
+  }
+}
