@@ -1,10 +1,10 @@
 {
   "name": "getdrip-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Node JS wrapper for Drip v2 API",
   "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
