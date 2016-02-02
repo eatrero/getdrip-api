@@ -1,8 +1,14 @@
 # getdrip-api
 A nodejs wrapper for drip  v2 api.
 
+## How To Install
+
+```
+npm install getdrip-api --save
+```
+
 #### Usage
-    var getdrip = require('getdripapi')(apiToken, accountId);
+    var getdrip = require('getdrip-api')(apiToken, accountId);
     
 # Supported APIs
 
