@@ -76,7 +76,7 @@ creates an event for a given subscriber
 ### `.createTag` 
 creates a tag for a given subscriber
 #### Usage
-    getdrip.createEvent = function (email, tag, opts, function(err, res, body) {
+    getdrip.createTag = function (email, tag, opts, function(err, res, body) {
         // no body
     }
 
