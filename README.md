@@ -80,5 +80,12 @@ creates a tag for a given subscriber
         // no body
     }
 
+### `.createTags` 
+creates multiple tags for a given subscriber
+#### Usage
+    getdrip.createTags = function (email, tags, opts, function(errors, responses, body) {
+        // no body
+    }
+
 # License
 [MIT](https://github.com/eatrero/getdrip-api/blob/master/MIT-LICENSE.txt)
