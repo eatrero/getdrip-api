@@ -76,14 +76,14 @@ creates an event for a given subscriber
 ### `.createTag` 
 creates a tag for a given subscriber
 #### Usage
-    getdrip.createTag = function (email, tag, opts, function(err, res, body) {
+    getdrip.createTag = function (email, tag, function(err, res, body) {
         // no body
     }
 
 ### `.createTags` 
 creates multiple tags for a given subscriber
 #### Usage
-    getdrip.createTags = function (email, tags, opts, function(errors, responses, body) {
+    getdrip.createTags = function (email, tags, function(errors, responses, body) {
         // no body
     }
 
