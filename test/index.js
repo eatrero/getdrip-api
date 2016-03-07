@@ -32,7 +32,7 @@ describe('getdrip module', function() {
 		})
 	})
 
-	it('should return 200 when accessing the get subscriber api', function(done) {
+	it('should return 200 when accessing the create subscriber api', function(done) {
 		getdrip.createSubscriber(testEmail, {},
 			function(err, res, body){
 				console.log(body);
@@ -44,12 +44,26 @@ describe('getdrip module', function() {
 		)
 	})
 
-	it('should return 201 when accessing the create subscriber api', function(done) {
+	it('should return 201 when accessing the create tag api', function(done) {
 		getdrip.createTag(testEmail, 'new tag',
 			function(err, res, body){
 				console.log(body);
 				expect(err).to.equal(null);
 				expect(res.statusCode).to.equal(201);
+				done();
+			}
+		)
+	});
+
+	it('should return 201 when accessing the create tag api (multiple tags)', function(done) {
+		getdrip.createTags(testEmail, ['new tag', 'another new tag'],
+			function(err, responses, body){
+				console.log(body);
+				expect(err).to.equal(null);
+				
+				for (var i = 0; i < responses.length; i++)
+					expect(responses[i].statusCode).to.equal(201);
+
 				done();
 			}
 		)
