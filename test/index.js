@@ -115,6 +115,43 @@ describe('getdrip module', function() {
 		)
 	})
 
+	it('should return 200 when accessing the unsubscribe from campaign api', function(done) {
+		getdrip.subscribeToCampaign(testEmail, campaignId, {},
+			function(err, res, body){
+				console.log(res.statusCode);
+				console.log(body);
+				expect(err).to.equal(null);
+				expect(res.statusCode).to.equal(201);
+				getdrip.unsubscribeFromCampaign(testEmail, campaignId,
+				function(err, res, body) {
+					console.log(res.statusCode);
+					console.log(body);
+					expect(err).to.equal(null);
+					expect(res.statusCode).to.equal(200);
+					done();
+				})
+			}
+		)
+	})
+
+	it('should return 200 when accessing the unsubscribe from campaigns api', function(done) {
+		getdrip.subscribeToCampaign(testEmail, campaignId, {},
+			function(err, res, body){
+				console.log(res.statusCode);
+				console.log(body);
+				expect(err).to.equal(null);
+				expect(res.statusCode).to.equal(201);
+				getdrip.unsubscribeFromCampaigns(testEmail,
+				function(err, res, body) {
+					console.log(res.statusCode);
+					console.log(body);
+					expect(err).to.equal(null);
+					expect(res.statusCode).to.equal(200);
+					done();
+				})
+			}
+		)
+	})
 
 	/*	it('should return 204 when accessing the delete subscriber api', function(done) {
 	 getdrip.deleteSubscriber(subscriberId,

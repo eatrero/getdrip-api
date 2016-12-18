@@ -57,9 +57,22 @@ returns list of campgains
 adds a subscriber to a campaign
 #### Usage
     getdrip.subscribeToCampaign(email, campaignId, {}, function(err, res, body) {
-        // returns list of subscribers added to the campaign
+        // nothing
+    }
+
+### `.unsubscribeFromCampaign`
+removes a subscriber from a campaign
+#### Usage
+    getdrip.unsubscribeFromCampaign(email, campaignId, function(err, res, body) {
+        // nothing
     }
     
+### `.unsubscribeFromCampaigns`
+removes a subscriber from all campaigns
+#### Usage
+    getdrip.unsubscribeFromCampaigns(email, function(err, res, body) {
+        // returns list of subscribers added to the campaign
+    }
     
 
 ## [Events](https://www.getdrip.com/docs/rest-api#events)
