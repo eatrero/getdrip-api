@@ -29,6 +29,17 @@ describe('getdrip module', function() {
 			expect(err).to.equal(null);
 			expect(res.statusCode).to.equal(200);
 			done();
+		});
+  });
+
+  it('should return 200 when accessing the list subscribers api with parameters', function(done) {
+    getdrip.getSubscribers({ tags : 'hello,world' }, function(err, res, body){
+			console.log(err)
+			console.log(body)
+			expect(err).to.equal(null);
+			expect(res.statusCode).to.equal(200);
+      expect(res.request.uri.query).to.equal('tags=hello,world');
+			done();
 		})
 	})
 
@@ -60,7 +71,7 @@ describe('getdrip module', function() {
 			function(err, responses, body){
 				console.log(body);
 				expect(err).to.equal(null);
-				
+
 				for (var i = 0; i < responses.length; i++)
 					expect(responses[i].statusCode).to.equal(201);
 
@@ -165,4 +176,3 @@ describe('getdrip module', function() {
 	 })*/
 
 })
-
